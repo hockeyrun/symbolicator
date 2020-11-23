@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+### Internal
+
+- Always return unwind_status in symbolication responses and prefer an "unused" status even when the CFI was found. ([#299](https://github.com/getsentry/symbolicator/pull/299))
+
 ## 0.3.0
 
 - No documented changes.
