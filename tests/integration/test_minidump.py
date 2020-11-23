@@ -514,7 +514,7 @@ MINIDUMP_SUCCESS = {
         },
         {
             "debug_status": "found",
-            "unwind_status": "found",
+            "unwind_status": "unused",
             "arch": "x86",
             "type": "pe",
             "code_id": "590285e9e0000",
@@ -605,7 +605,7 @@ MINIDUMP_SUCCESS = {
         },
         {
             "debug_status": "found",
-            "unwind_status": "found",
+            "unwind_status": "unused",
             "arch": "x86",
             "type": "pe",
             "code_id": "59b0d8f3183000",

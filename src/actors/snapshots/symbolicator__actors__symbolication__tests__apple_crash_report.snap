@@ -111,6 +111,7 @@ stacktraces:
         instruction_addr: 0x54485244
 modules:
   - debug_status: missing
+    unwind_status: unused
     features:
       has_debug_info: false
       has_unwind_info: false
@@ -125,6 +126,7 @@ modules:
     image_addr: 0x10864e000
     image_size: 108797951
   - debug_status: unused
+    unwind_status: unused
     features:
       has_debug_info: false
       has_unwind_info: false
@@ -139,6 +141,7 @@ modules:
     image_addr: 0x112bb2000
     image_size: 2170879
   - debug_status: unused
+    unwind_status: unused
     features:
       has_debug_info: false
       has_unwind_info: false
@@ -153,6 +156,7 @@ modules:
     image_addr: 0x112fc0000
     image_size: 221183
   - debug_status: unused
+    unwind_status: unused
     features:
       has_debug_info: false
       has_unwind_info: false
@@ -167,6 +171,7 @@ modules:
     image_addr: 0x113013000
     image_size: 1474559
   - debug_status: unused
+    unwind_status: unused
     features:
       has_debug_info: false
       has_unwind_info: false

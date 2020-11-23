@@ -413,8 +413,7 @@ pub struct CompleteObjectInfo {
     pub debug_status: ObjectFileStatus,
 
     /// Status for fetching the file with unwind info (for minidump stackwalking).
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub unwind_status: Option<ObjectFileStatus>,
+    pub unwind_status: ObjectFileStatus,
 
     /// Features available during symbolication.
     pub features: ObjectFeatures,
@@ -443,7 +442,7 @@ impl From<RawObjectInfo> for CompleteObjectInfo {
 
         CompleteObjectInfo {
             debug_status: ObjectFileStatus::Unused,
-            unwind_status: None,
+            unwind_status: ObjectFileStatus::Unused,
             features: ObjectFeatures::default(),
             arch: Arch::Unknown,
             raw,

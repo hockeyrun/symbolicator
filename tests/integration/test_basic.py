@@ -47,6 +47,7 @@ SUCCESS_WINDOWS = {
             "code_file": "C:\\Windows\\System32\\kernel32.dll",
             "debug_file": "C:\\Windows\\System32\\wkernel32.pdb",
             "debug_status": "found",
+            "unwind_status": "unused",
             "features": {
                 "has_debug_info": True,
                 "has_sources": False,
@@ -84,6 +85,7 @@ def _make_unsuccessful_result(status):
                 "code_file": "C:\\Windows\\System32\\kernel32.dll",
                 "debug_file": "C:\\Windows\\System32\\wkernel32.pdb",
                 "debug_status": status,
+                "unwind_status": "unused",
                 "features": {
                     "has_debug_info": False,
                     "has_sources": False,

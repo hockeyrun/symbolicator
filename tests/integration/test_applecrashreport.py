@@ -15,6 +15,7 @@ APPLE_CRASH_REPORT_SUCCESS = {
             "Projects/YetAnotherMac/MacNoEditor/YetAnotherMac.app/Contents/MacOS/YetAnotherMac",
             "debug_id": "2d903291-397d-3d14-bfca-52c7fb8c5e00",
             "debug_status": "missing",
+            "unwind_status": "unused",
             "features": {
                 "has_debug_info": False,
                 "has_sources": False,
@@ -34,6 +35,7 @@ APPLE_CRASH_REPORT_SUCCESS = {
             "Projects/YetAnotherMac/MacNoEditor/YetAnotherMac.app/Contents/UE4/Engine/Binaries/ThirdParty/PhysX3/Mac/libPhysX3PROFILE.dylib",
             "debug_id": "6deccee4-a052-3ea4-bb67-957b06f53ad1",
             "debug_status": "unused",
+            "unwind_status": "unused",
             "features": {
                 "has_debug_info": False,
                 "has_sources": False,
@@ -53,6 +55,7 @@ APPLE_CRASH_REPORT_SUCCESS = {
             "Projects/YetAnotherMac/MacNoEditor/YetAnotherMac.app/Contents/UE4/Engine/Binaries/ThirdParty/PhysX3/Mac/libPhysX3CookingPROFILE.dylib",
             "debug_id": "5e012a64-6cc5-36f1-9b4d-a0564049169b",
             "debug_status": "unused",
+            "unwind_status": "unused",
             "features": {
                 "has_debug_info": False,
                 "has_sources": False,
@@ -72,6 +75,7 @@ APPLE_CRASH_REPORT_SUCCESS = {
             "Projects/YetAnotherMac/MacNoEditor/YetAnotherMac.app/Contents/UE4/Engine/Binaries/ThirdParty/PhysX3/Mac/libPhysX3CommonPROFILE.dylib",
             "debug_id": "9c198544-7194-3de6-b67e-4cc27eed2eab",
             "debug_status": "unused",
+            "unwind_status": "unused",
             "features": {
                 "has_debug_info": False,
                 "has_sources": False,
@@ -91,6 +95,7 @@ APPLE_CRASH_REPORT_SUCCESS = {
             "Projects/YetAnotherMac/MacNoEditor/YetAnotherMac.app/Contents/UE4/Engine/Binaries/ThirdParty/PhysX3/Mac/libPxFoundationPROFILE.dylib",
             "debug_id": "890f0997-f904-3544-9af7-cf011f09a06e",
             "debug_status": "unused",
+            "unwind_status": "unused",
             "features": {
                 "has_debug_info": False,
                 "has_sources": False,

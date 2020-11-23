@@ -17,6 +17,7 @@ stacktraces:
         lineno: 1
 modules:
   - debug_status: found
+    unwind_status: unused
     features:
       has_debug_info: true
       has_unwind_info: false
