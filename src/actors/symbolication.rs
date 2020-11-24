@@ -193,25 +193,15 @@ impl CfiCacheModules {
     /// needed, or we thought a CFI module was missing but it wasn't needed.  So this also
     /// updates the [`CfiModule::cfi_status`] field.
     fn mark_scanned(&mut self, code_id: CodeModuleId) {
-        match self.inner.get_mut(&code_id) {
-            Some(cfi_module) => {
-                cfi_module.scanned = true;
-            }
-            None => {
-                // We report this error once per missing module in a minidump.
-                sentry::capture_message(
-                    "Referenced module not found during initial stack scan",
-                    sentry::Level::Error,
-                );
-                let cfi_module = CfiModule {
-                    features: Default::default(),
-                    cfi_status: ObjectFileStatus::Missing,
-                    cfi_path: None,
-                    scanned: true,
-                };
-                self.inner.insert(code_id, cfi_module);
-            }
-        }
+        let mut cfi_module = self.inner.entry(code_id).or_insert_with(|| {
+            // We report this error once per missing module in a minidump.
+            sentry::capture_message(
+                "Referenced module not found during initial stack scan",
+                sentry::Level::Error,
+            );
+            Default::default()
+        });
+        cfi_module.scanned = true;
     }
 
     /// Processes the [`CfiModule::scanned`] information to update the final module status.
@@ -238,7 +228,7 @@ struct CfiModule {
     cfi_status: ObjectFileStatus,
     /// Path to the CFI file in our cache, if there was a cache.
     cfi_path: Option<PathBuf>,
-    /// Indicates if the module was user for stack scanning.
+    /// Indicates if the module was used for stack scanning.
     scanned: bool,
 }
 
