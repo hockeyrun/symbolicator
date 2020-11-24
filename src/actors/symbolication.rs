@@ -238,7 +238,7 @@ struct CfiModule {
     cfi_status: ObjectFileStatus,
     /// Path to the CFI file in our cache, if there was a cache.
     cfi_path: Option<PathBuf>,
-    ///
+    /// Indicates if the module was user for stack scanning.
     scanned: bool,
 }
 
@@ -248,7 +248,7 @@ struct CfiModule {
 /// [`CompleteObjectInfo`] objects from them, which are used to eventually return the
 /// module list in the [`SymbolicateStacktraces`] object of the final JSON API response.
 ///
-/// The builder requires marking modules are referenced by stack frames.  This allows it to
+/// The builder requires marking modules that are referenced by stack frames.  This allows it to
 /// omit modules which do not look like real modules (i.e. modules which don't have a valid
 /// code or debug ID, they could be mmap'ed fonts or other such things) as long as they are
 /// not mapped to address ranges used by any frames in the stacktraces.
