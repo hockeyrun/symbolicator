@@ -36,6 +36,7 @@ MACHO_SUCCESS = {
             "image_addr": "0x100000000",
             "image_size": 4096,
             "debug_status": "found",
+            "unwind_status": "unused",
             "features": {
                 "has_debug_info": True,
                 "has_sources": False,

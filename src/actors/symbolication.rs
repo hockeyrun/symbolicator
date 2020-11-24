@@ -148,7 +148,7 @@ impl CfiCacheModules {
                         }
                     }
                 };
-                (code_id.clone(), cfi_module)
+                (*code_id, cfi_module)
             })
             .collect();
         Self { inner }
@@ -181,7 +181,7 @@ impl CfiCacheModules {
                         err
                     })
                     .ok()?;
-                Some((code_id.clone(), cfi_cache))
+                Some((*code_id, cfi_cache))
             })
             .collect()
     }
