@@ -131,10 +131,14 @@ impl CfiCacheModules {
                                 ObjectFileStatus::from(&err)
                             }
                         };
+                        let cfi_path = match cfi_cache.status() {
+                            CacheStatus::Positive => Some(cfi_cache.path().to_owned()),
+                            _ => None,
+                        };
                         CfiModule {
                             features: cfi_cache.features(),
                             cfi_status,
-                            cfi_path: Some(cfi_cache.path().to_owned()),
+                            cfi_path,
                             scanned: false,
                         }
                     }
@@ -167,7 +171,7 @@ impl CfiCacheModules {
                 let bytes = ByteView::open(path)
                     .map_err(|err| {
                         log::error!("Error while reading cficache: {}", LogError(&err));
-                        cfi_module.cfi_status = ObjectFileStatus::Other;
+                        cfi_module.cfi_status = ObjectFileStatus::Missing;
                         err
                     })
                     .ok()?;
